@@ -6,13 +6,21 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
+import { http } from '@/utils/http';
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
+  },
+  mounted() {
+    this.getBranch();
+  },
+  methods: {
+    async getBranch() {
+      console.log('gdgd', http);
+    },
   },
 };
 </script>
